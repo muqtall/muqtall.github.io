@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Muqtal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paleo: {
+                            cream: '#fdfbe7',      /* Cream background similar to reference header */
+                            navbg: '#e6a15c',      /* Orange/Brown navbar color matching reference */
+                            sidebar: '#b7d5ac',    /* Soft green matching reference sidebar */
+                            brown: '#8c6239',
+                            darkbrown: '#4a3319',
+                            terracotta: '#b85d39',
+                            charcoal: '#2c221e'
+                        },
+                        fontFamily: {
+                            cinzel: ['Cinzel', 'serif'],
+                            lora: ['Lora', 'serif']
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lora', serif;
+            background-color: #f7f4ec;
+            color: #2c221e;
+        }
+        h1, h2, h3, h4, .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-paleo-terracotta selection:text-white">
+
+    <!-- TOP HEADER (Mirip Gambar Referensi) -->
+    <header class="bg-[#fcf8b6] border-b-2 border-[#d4c5b9] py-10 px-4 text-center shadow-sm">
+        <div class="max-w-5xl mx-auto space-y-2">
+            <h1 class="text-4xl md:text-5xl font-bold font-cinzel text-paleo-darkbrown tracking-wide">
+                Website Muqtal
+            </h1>
+            <p class="text-paleo-darkbrown italic text-sm md:text-base">
+                Arsip Era Prasejarah & Catatan Fosil Sang Penjelajah Zaman...
+            </p>
+        </div>
+    </header>
+
+    <!-- NAVIGATION BAR (Persis di bawah header seperti referensi) -->
+    <nav class="bg-[#e6a15c] border-b-2 border-[#c27c36] shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex flex-wrap items-center justify-center sm:justify-start gap-4 md:gap-8 font-cinzel font-semibold text-sm md:text-base">
+            <a href="#tentang" class="text-paleo-darkbrown hover:text-white transition-colors underline underline-offset-4">Tentang Diriku</a>
+            <a href="#lagu" class="text-paleo-darkbrown hover:text-white transition-colors underline underline-offset-4">Lagu</a>
+            <a href="#hobi" class="text-paleo-darkbrown hover:text-white transition-colors underline underline-offset-4">Hobi</a>
+            <a href="#series-movie" class="text-paleo-darkbrown hover:text-white transition-colors underline underline-offset-4">Series & Movie</a>
+            <a href="#sekolah" class="text-paleo-darkbrown hover:text-white transition-colors underline underline-offset-4">Sekolah</a>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTAINER (2 Kolom: Konten di Kiri, Sidebar Tautan Eksternal di Kanan) -->
+    <div class="max-w-5xl mx-auto w-full px-4 py-8 grid grid-cols-1 lg:grid-cols-4 gap-8 flex-grow">
+
+        <!-- KONTEN UTAMA (Kiri) -->
+        <main class="lg:col-span-3 space-y-10">
+
+            <!-- SECTION: LAGU (Hanya bagian ini yang tampil di halaman utama, menggunakan embed YouTube Music asli yang berfungsi) -->
+            <section id="lagu" class="bg-white rounded-xl p-6 border border-[#d4c5b9] shadow-sm space-y-4">
+                <div class="border-b border-[#e8dfd1] pb-3 flex items-center justify-between">
+                    <h2 class="text-2xl font-bold font-cinzel text-paleo-darkbrown flex items-center gap-2">
+                        <i class="fa-solid fa-compact-disc text-paleo-terracotta"></i> Lagu Favorit: Vision - Naqt Vane
+                    </h2>
+                    <span class="text-xs font-semibold px-2.5 py-1 bg-paleo-cream text-paleo-darkbrown rounded border border-paleo-brown/20">Pemutar Aktif</span>
+                </div>
+                <p class="text-sm text-paleo-charcoal/90">
+                    Rabu, 23 September 2026 — Putar lagu favoritmu di bawah ini untuk menemani penjelajahan situs purbakala Muqtal.
+                </p>
+
+                <!-- YouTube Music Embedded Player untuk memastikan tombol berfungsi memutar musik -->
+                <div class="bg-[#fdfbe7] p-4 rounded-lg border border-[#e6a15c]/40 flex flex-col items-center justify-center space-y-3">
+                    <div class="w-full flex items-center justify-between px-2">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-music text-paleo-terracotta animate-pulse text-lg"></i>
+                            <span class="font-cinzel font-bold text-sm text-paleo-darkbrown">Vision - Naqt Vane</span>
+                        </div>
+                        <a href="https://music.youtube.com/watch?v=0Wt0fEFBVeo&si=gOz2BNOJNjOW9CqY" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-800 hover:underline flex items-center gap-1 font-semibold">
+                            <i class="fa-solid fa-external-link-alt text-[10px]"></i> Buka di YouTube Music
+                        </a>
+                    </div>
+                    <!-- Responsive Embed Iframe -->
+                    <div class="w-full aspect-video sm:aspect-[21/9] rounded-lg overflow-hidden border border-[#d4c5b9] shadow-inner bg-black">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0Wt0fEFBVeo" title="Vision - Naqt Vane" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-code" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+
+           
+        <!-- SIDEBAR (Kanan - Tautan Eksternal dengan warna hijau lembut persis seperti referensi) -->
+        <aside class="lg:col-span-1">
+            <div class="bg-[#b7d5ac] rounded-xl p-5 border border-[#8fb982] shadow-sm space-y-4 sticky top-6">
+                <h3 class="font-cinzel font-bold text-lg text-paleo-darkbrown border-b border-[#8fb982] pb-2">
+                    Tautan Eksternal
+                </h3>
+                <ul class="space-y-2.5 text-sm font-medium">
+                    <li>
+                        <a href="https://music.youtube.com/watch?v=0Wt0fEFBVeo&si=gOz2BNOJNjOW9CqY" target="_blank" rel="noopener noreferrer" class="text-blue-900 hover:underline flex items-center gap-1.5">
+                            <i class="fa-solid fa-link text-xs"></i> YouTube Music (Vision)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://id.wikipedia.org/wiki/Paleontologi" target="_blank" rel="noopener noreferrer" class="text-blue-900 hover:underline flex items-center gap-1.5">
+                            <i class="fa-solid fa-link text-xs"></i> Wikipedia Paleontologi
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer" class="text-blue-900 hover:underline flex items-center gap-1.5">
+                            <i class="fa-solid fa-link text-xs"></i> W3Schools HTML Guide
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-blue-900 hover:underline flex items-center gap-1.5">
+                            <i class="fa-solid fa-link text-xs"></i> Arsip Fosil Nusantara
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-paleo-darkbrown text-paleo-cream py-6 mt-12 text-center text-xs font-cinzel border-t border-paleo-brown">
+        <p>© 2026 Website Muqtal • Paleontologist & Ancient Era Theme</p>
+    </footer>
+
+</body>
+</html>
